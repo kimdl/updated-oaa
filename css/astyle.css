@@ -1,0 +1,522 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: 24% 50%;
+    opacity: 1;
+}
+
+.wholeform{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+.formAdmsn{
+    width: 100%;
+}
+.form{
+    padding: 3%;
+    border-radius: 5px;
+    background-color: rgb(0,0,0, 0.95);
+    margin-bottom: 20px;
+}
+.container{  
+    width: 100%;
+    padding: 2%;
+}
+.appID{
+    font-size: 25px;
+    float: right;
+}
+
+.container h1{
+    margin-left: 10px;
+}
+.container h2{
+    width: 100%;
+    color: #45f3ff;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.container h3{
+    
+    color: #fff;
+    font-size: 23px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.container p{
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container .errorMessage p{
+    width: 100%;
+    color: rgb(240, 65, 65);
+    font-size: 18px;
+    text-align: center;
+}
+.container .row100
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+.container .row100 .col
+{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 5 10px;
+    transition: 0.5s;
+}
+.container .row100 .inputBox{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #45f3ff;
+}
+.container .row100 .inputBox input,
+.container .row100 .inputBox.select select,
+.container .row100 .inputBox.textarea textarea
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
+}
+
+.container .row100 .inputBox .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.container .row100 .inputBox input:focus + .text,
+.container .row100 .inputBox input:valid + .text
+{
+    top: -35px;
+    left: -10px;
+}
+
+.container .row100 .inputBox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+.container .row100 .inputBox input:focus ~ .line,
+.container .row100 .inputBox input:valid ~ .line
+{
+    height: 100%;
+}
+
+.container .row100 .inputBox.textarea
+{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+
+.container .row100 .inputBox.textarea textarea{
+    height: 100%;
+    resize: none;
+}
+
+.container .row100 .inputBox textarea:focus + .text,
+.container .row100 .inputBox textarea:valid + .text
+{
+    top: -35px;
+    left: -10px;
+}
+.container .row100 .inputBox textarea:focus ~ .line,
+.container .row100 .inputBox textarea:valid ~ .line
+{
+    height: 100%;
+}
+
+
+.container .row100 .inputBox.select select{
+    height: 100%;
+    resize: none;
+}
+
+.container .row100 .inputBox select:focus + .text,
+.container .row100 .inputBox select:valid + .text
+{
+    top: -35px;
+    left: -10px;
+}
+.container .row100 .inputBox select:focus ~ .line,
+.container .row100 .inputBox select:valid ~ .line
+{
+    height: 100%;
+}
+
+input[type="submit"]
+{
+    margin-top: 10px;
+
+    display: inline-block;
+    padding: 0.874rem 2.186rem;
+    background-image: linear-gradient(to right, hsl(233, 26%, 24%), #45f3ff);
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #000;
+    font-size: 18px;
+    transition: opacity 300ms ease-in-out;
+}
+input:hover[type="submit"]
+{
+    color: #fff;
+    transition: opacity 100ms ease-in-out;
+
+}
+
+.x{
+    text-align: center;
+}
+/* Rounded sliders */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 20px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 25px;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #15b91d;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #15b91d;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+.card{
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+.card1{
+    background-color: #992c2d;
+}
+.card2{
+    background-color: #101f2f;
+}
+.card3{
+    background-color: #1241a3;
+}
+
+
+/* 
+
+.tblDocu{
+    margin-left: auto;
+    margin-right: auto;
+}
+tr td{
+    border: 1px solid #fff;
+    color: #000;
+    font-size: 18px;
+    text-align: left;
+    padding: 0.874rem 2.186rem;
+    margin-bottom: 10px;
+}
+td input{
+    padding: 5px;
+    margin-left: 10px;
+}
+ */
+.container .formTable{
+    margin-bottom: 20px;
+    padding: 2%;
+    border-radius: 10px;
+    background-color: rgba(36, 37, 36, 0.95);
+}
+.container .formTable1{
+    padding: 2%;
+    border-radius: 10px;
+    background-color: rgba(36, 37, 36, 0.99);
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container .formTable p{
+    font-size: 15px;
+    text-align: left;
+}
+input[type="file"]
+{
+    display: inline-block;
+    padding: 0.874rem 2.186rem;
+    background-image: linear-gradient(to right, hsl(233, 26%, 24%), #45f3ff);
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #000;
+    font-size: 18px;
+    transition: opacity 300ms ease-in-out;
+}
+
+
+
+/* The container */
+.containercb {
+    color: #fff;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .containercb input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .containercb:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .containercb input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .containercb input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .containercb .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+  .sidenav {
+    width: 130px;
+    z-index: 1;
+    top: 20px;
+    left: 10px;
+    background: #eee;
+    overflow-x: hidden;
+    padding: 8px 0;
+    }
+
+    .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #2196F3;
+    display: block;
+    }
+
+    .sidenav a:hover {
+    color: #064579;
+    }
+
+    .main {
+    margin-left: 140px; /* Same width as the sidebar + left position in px */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+    }
+
+
+    
+/*-------- userbuttons----*/
+.ucampus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+} 
+.ucampus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.ucampus-col img{
+    width: 100%;
+    display: block;
+}
+
+.ulayer{
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.ulayer:hover{
+    background: rgba(226, 0, 0, 0.7);
+}
+.ulayer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.ulayer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+div .app{
+    height: 400px;
+    overflow-y: scroll;
+}
+.col .sy{
+    height: 250px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+/* btn */
+.row100 .hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border:1px solid #f44336;
+    background: #f33446;
+    transition: 1s;
+}
+
